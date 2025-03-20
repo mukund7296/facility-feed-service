@@ -1,1 +1,43 @@
 
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Linter
+        run: flake8 .
+
+      - name: Run Tests
+        run: pytest
+
+  build-push:
+    needs: test-lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker Image
+        run: docker build -t facility-feed-service .
+
+      - name: Push to AWS ECR
+        run: |
+          docker tag facility-feed-service:latest ${{ secrets.AWS_ECR_URI }}/facility-feed-service:latest
+          docker push ${{ secrets.AWS_ECR_URI }}/facility-feed-service:latest
