@@ -151,9 +151,9 @@ docker run --env-file .env facility-feed-service
 📄 **File:** `.github/workflows/ci-cd.yml`  
 
 The pipeline includes:  
-✅ **Linting and Testing** (flake8, pytest)  
-✅ **Building Docker Image**  
-✅ **Pushing to AWS ECR**  
+i **Linting and Testing** (flake8, pytest)  
+ii **Building Docker Image**  
+iii **Pushing to AWS ECR**  
 
 ```yaml
 name: CI/CD Pipeline
@@ -207,9 +207,9 @@ jobs:
 ---
 
 ## **⏰ Running as a Scheduled Task in AWS ECS Fargate**  
-1️⃣ **Create an ECS Task Definition**  
-2️⃣ **Set up a CloudWatch Event Rule** to trigger the task  
-3️⃣ **Use AWS Fargate** to run the containerized service  
+1️ **Create an ECS Task Definition**  
+2️ **Set up a CloudWatch Event Rule** to trigger the task  
+3️ **Use AWS Fargate** to run the containerized service  
 
 ---
 
@@ -246,12 +246,12 @@ pytest tests/
 ---
 
 ## **📌 Summary**
-✅ **Asynchronous** processing for efficiency  
-✅ **JSON & gzip compression** for optimized storage  
-✅ **AWS S3 uploads** handled asynchronously  
-✅ **Dockerized** for easy deployment  
-✅ **CI/CD pipeline** for automated testing & deployment  
-✅ **Scheduled execution** on **AWS ECS Fargate**  
+I **Asynchronous** processing for efficiency  
+II **JSON & gzip compression** for optimized storage  
+III **AWS S3 uploads** handled asynchronously  
+IV **Dockerized** for easy deployment  
+V **CI/CD pipeline** for automated testing & deployment  
+VI **Scheduled execution** on **AWS ECS Fargate**  
 
 ---
 
