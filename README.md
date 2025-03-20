@@ -205,6 +205,8 @@ jobs:
 ```
 
 ---
+<img width="1399" alt="image" src="https://github.com/user-attachments/assets/80700120-88a7-468a-af5f-c7568af8cbad" />
+
 
 ## **⏰ Running as a Scheduled Task in AWS ECS Fargate**  
 1️ **Create an ECS Task Definition**  
