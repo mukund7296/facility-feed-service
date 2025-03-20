@@ -53,6 +53,8 @@ pip install -r requirements.txt
 ```
 
 ---
+<img width="1040" alt="image" src="https://github.com/user-attachments/assets/50f1f565-3eae-4c5d-9aa1-8b4b68d47102" />
+
 
 ### **3️⃣ Configure Environment Variables**  
 Create a `.env` file with your database and AWS credentials:  
